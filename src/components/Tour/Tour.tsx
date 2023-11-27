@@ -3,11 +3,12 @@ import { TourInterface } from '../../types';
 
 interface Props {
   tour: TourInterface;
+  onClick: (tour: TourInterface) => void;
 }
 
-const Tour: React.FC<Props> = ({ tour }) => {
+const Tour: React.FC<Props> = ({ tour, onClick }) => {
   return (
-    <div className="col-4 mb-4">
+    <div className="col-4 mb-4" onClick={() => onClick(tour)}>
       <div className="card rounded overflow-hidden h-100">
         <img
           src={tour.img}
