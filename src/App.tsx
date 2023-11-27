@@ -6,9 +6,10 @@ import Contact from './containers/Contact/Contact';
 import BookTour from './containers/BookTour/BookTour';
 import Portfolio from './containers/Portfolio/Portfolio';
 import NewTour from './containers/NewTour/NewTour';
+import WatchHomework from './containers/WatchHomework/WatchHomework';
+import CountryBlock from './containers/CountryBlock/CountryBlock';
 import NotFound from './containers/NotFound';
 import { TourInterface } from './types';
-import WatchHomework from './containers/WatchHomework/WatchHomework';
 
 const App = () => {
   const [tours, setTours] = useState<TourInterface[]>([
@@ -73,7 +74,7 @@ const App = () => {
           <Route path="/books" element={<BookTour cartsTours={cartsTours} />} />
           <Route path="/portfolio" element={<Portfolio />}>
             <Route path="homework-movie" element={<WatchHomework />} />
-            <Route path="homework-countries" element={<NotFound />} />
+            <Route path="homework-countries" element={<CountryBlock />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
