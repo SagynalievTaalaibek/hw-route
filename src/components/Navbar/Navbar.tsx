@@ -24,14 +24,14 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/favorites"
+                  to="/about"
                   className={({ isActive, isPending }) =>
                     `nav-link ${
                       isPending ? 'pending' : isActive ? 'active' : ''
                     }`
                   }
                 >
-                  Favorites
+                  About
                 </NavLink>
               </li>
               <li className="nav-item">
