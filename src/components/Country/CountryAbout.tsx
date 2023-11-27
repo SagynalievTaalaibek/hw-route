@@ -31,6 +31,7 @@ const CountryAbout: React.FC<Props> = ({ countryInfo }) => {
 
   useEffect(() => {
     if (countryInfo) {
+      setBorders(null);
       setCodeCountry(countryInfo.borders);
     }
 
@@ -78,8 +79,11 @@ const CountryAbout: React.FC<Props> = ({ countryInfo }) => {
           <div>
             <h4>Borders with: </h4>
             <ul>
-              {borders &&
-                borders.map((border) => <li key={border.id}>{border.name}</li>)}
+              {borders ? (
+                borders.map((border) => <li key={border.id}>{border.name}</li>)
+              ) : (
+                <h5>No Borders</h5>
+              )}
             </ul>
           </div>
         </div>
